@@ -1,77 +1,109 @@
-body {
+/* Reset default styles */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background:sky;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body and background */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: url('https://wallpapersden.com/anime-girl-hd-night-fun-wallpaper/') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Header styles */
 header {
-    background: #ff7e5f;
-    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background: rgba(0, 0, 0, 0.6);
     text-align: center;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+.hero .content {
+    max-width: 600px;
 }
 
-header ul {
-    list-style: none;
-    padding: 0;
-}
-
-header ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-header ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header ul li a:hover {
-    color: #ffcccb;
-}
-
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-section h2 {
-    color: #ff7e5f;
+.hero h1 {
+    font-size: 48px;
     margin-bottom: 20px;
-    font-size: 2em;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 20px;
+.hero p {
+    font-size: 20px;
 }
 
-.card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px #0003;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Features section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px #0004;
+.features .feature {
+    text-align: center;
+    width: 30%;
 }
 
+.features .feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features .feature p {
+    font-size: 16px;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: 20px;
-    background: #ff7e5f;
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
